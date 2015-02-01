@@ -12,33 +12,40 @@ window.onload = () ->
 
 	html = ''
 
-	html += '<ul class="calendar_ul">'
 	cnt = 1
 	d_flag = false
+	ul_start_html = '<ul class="calendar_ul">'
+	ul_end_html = '</ul>'
+	li_normal_html = '<li class="calendar_day"><div class="calendar_base_style">'
+	li_today_html = '<li class="calendar_day"><div class="calendar_base_style calendar_today">'
+	li_blank_html = '<li class="calendar_blank"><div class="calendar_base_style>'
+	li_end_html = '</div></li>'
+
+	html += ul_start_html
 	for j in [1..7]
 		if ((wday + 1 == j) && d_flag == false) || d_flag == true
 			if today == cnt
-				html += '<li class="calendar_day"><div class="calendar_base_style calendar_today">' + cnt + '</div></li>'
+				html += li_today_html + cnt + li_end_html
 			else
-				html += '<li class="calendar_day"><div class="calendar_base_style">' + cnt + '</div></li>'
+				html += li_normal_html + cnt + li_end_html
 			cnt += 1
 			if !d_flag
 				d_flag = true
 		else
-			html += '<li class="calendar_blank"></li>'
-	html += '</ul>'
+			html += li_blank_html + li_end_html
+	html += ul_end_html
 
 	for i in [1..5]
-		html += '<ul class="calendar_ul">'
+		html += ul_start_html
 		for j in [1..7]
 			if days >= cnt
 				if today == cnt
-					html += '<li class="calendar_day"><div class="calendar_base_style calendar_today">' + cnt + '</div></li>'
+					html += li_today_html + cnt + li_end_html
 				else
-					html += '<li class="calendar_day"><div class="calendar_base_style">' + cnt + '</div></li>'
+					html += li_normal_html + cnt + li_end_html
 				cnt += 1
 			else
-				html += '<li class="calendar_blank"></li>'
-		html += '</ul>'
+				html += li_blank_html + li_end_html
+		html += ul_end_html
 
 	$("#content").html(html)
