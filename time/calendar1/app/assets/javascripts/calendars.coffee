@@ -4,7 +4,6 @@
 
 window.onload = () ->
 
-	# 現在日を取得し、当月1日の曜日と末日を求めます。
 	now = new Date()
 	days = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate()
 	today = now.getDate()
