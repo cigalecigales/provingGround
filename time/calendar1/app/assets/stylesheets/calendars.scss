@@ -1,0 +1,27 @@
+// Place all the styles related to the Calendars controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/** Calendar ***/
+.calendar_ul li{
+  float: left;
+  list-style: none;
+}
+.calendar_ul li:first-child{
+  clear: both;
+}
+.calendar_day{
+  width: 30px;
+}
+.calendar_blank{
+
+}
+.calendar_base_style{
+  background: #FFCCCC;
+  width: 30px;
+  height:30px;
+  border: 1px solid #fff;
+}
+.calendar_today{
+  color: red;
+}
