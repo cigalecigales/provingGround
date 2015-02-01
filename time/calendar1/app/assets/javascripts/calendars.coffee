@@ -10,6 +10,13 @@ window.onload = () ->
 	wday = new Date( now.getFullYear(), now.getMonth(), 1 ).getDay()
 	lastDay = new Date( now.getFullYear(), now.getMonth() + 1, 0 ).getDate()
 
+	# Display YYYY/MM
+	month = (now.getMonth() + 1).toString()
+	if month.length == 1
+		month = "0" + month.toString()
+	year_month = now.getFullYear() + '/' + month
+	$("#month").html(year_month)
+
 	html = ''
 
 	cnt = 1
@@ -49,3 +56,11 @@ window.onload = () ->
 		html += ul_end_html
 
 	$("#content").html(html)
+
+	$(".calendar_day").click ->
+		val = $(".calendar_day").text()
+		$("#selected_day").val(val)
+
+	$("#testLi").click ->
+		value = $("#testLi").text()
+		$("#selected_day").val(value)
