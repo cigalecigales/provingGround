@@ -56,11 +56,9 @@ window.onload = () ->
 		html += ul_end_html
 
 	$("#content").html(html)
-
+	
 	$(".calendar_day").click ->
-		val = $(".calendar_day").text()
-		$("#selected_day").val(val)
-
-	$("#testLi").click ->
-		value = $("#testLi").text()
-		$("#selected_day").val(value)
+		day = $(this).text().toString()
+		if day.length == 1
+			day = "0" + day
+		$("#selected_day").val(now.getFullYear() + month + day)
