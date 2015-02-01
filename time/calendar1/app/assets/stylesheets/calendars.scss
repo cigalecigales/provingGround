@@ -6,6 +6,10 @@
 .calendar_ul li{
   float: left;
   list-style: none;
+  width: 30px;
+  height:30px;
+  background: #FFCCCC;
+  border: 1px solid #fff;
 }
 .calendar_ul li:first-child{
   clear: both;
