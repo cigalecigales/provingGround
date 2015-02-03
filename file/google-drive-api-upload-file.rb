@@ -1,9 +1,9 @@
 require 'google/api_client'
 require 'google_drive'
 
-CLIENT_ID = "202145211722-62vsv29hj71lc4n0blsf8abk8753438t.apps.googleusercontent.com"
-CLIENT_SECRET = "XTguC1Vybua-wJKtVx045kjX"
-REFRESH_TOKEN = "1/CY0qq2VCqnBDmTtBzjfus79E3dTYOz0rlG3jLKW9SHA"
+CLIENT_ID = ""
+CLIENT_SECRET = ""
+REFRESH_TOKEN = ""
 
 client = OAuth2::Client.new(
 	CLIENT_ID, CLIENT_SECRET,
