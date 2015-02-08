@@ -1,6 +1,8 @@
 #
 # Abstract Factory･･･矛盾の無いオブジェクトの組み合わせを作る
 #
+# sample by http://morizyun.github.io/blog/ruby-design-pattern-14-abstract-factory/
+#
 class Duck
 	def initialize(name)
 		@name = name
