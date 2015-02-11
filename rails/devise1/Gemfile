@@ -45,3 +45,5 @@ end
 
 # Devise
 gem 'devise'
+# Twitter
+gem 'omniauth-twitter'
