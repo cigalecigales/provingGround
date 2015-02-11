@@ -13,7 +13,7 @@ class FlickrSearch
 
   # 画像を検索する
   def search_img(word, per_page, sort, upload_date)
-    images = flickr.photos.search :tags => word, :sort => sort, :per_page => per_page, :min_upload_date => upload_date
+    images = flickr.photos.search :text => word, :sort => sort, :per_page => per_page, :min_upload_date => upload_date
 		return images
   end
 
@@ -38,6 +38,19 @@ class FlickrSearch
       end
     end
   end
+
+	# 画像情報をファイルに書き込む
+	def save_log(images = [], dir_name)
+		File.open("log.log", "a") do |file|
+			file.puts("******************************" + dir_name + "***********************************")
+		end
+		images.each do |image|
+			File.open("log.log", "a") do |file|
+				file_url = (FlickRaw.url image).to_s
+				file.puts(file_url)
+			end
+		end
+	end
 end
 
 #
@@ -77,24 +90,31 @@ class GoogleDriveUpload
 end
 
 #####################################################################################################################
-word = ["cicada", "蝉", "セミ"] # 検索ワード
+word = ["cicada", "蝉"] # 検索ワード
 per_page = 100 # 画像取得数
 sort = "date-posted-desc" # ソート順
-upload_date = Time.now - 3*24*60*60 # 基準日
+upload_date = Time.now - 1*24*60*60 # 基準日
 
 puts "検索ワード:" + word.map{ |tag| "#{ tag }" }.join(", ")
 puts "基準日:" + upload_date.to_s
 
 puts "******************* 画像取得スタート **********************"
 flickr_obj = FlickrSearch.new
-images = flickr_obj.search_img(word, per_page, sort, upload_date)
+
+@images = []
+word.each do |wd|
+	search_images = flickr_obj.search_img(wd, per_page, sort, upload_date)
+	search_images.each do |si|
+		@images.push(si)
+	end
+end
 dir_name = flickr_obj.create_dir
 
 puts "ディレクトリ名:" + dir_name
-puts "画像数:" + images.size.to_s
+puts "画像数:" + @images.size.to_s
 
-if images.size != 0
-	flickr_obj.save_img(images, dir_name)
+if @images.size != 0
+	flickr_obj.save_img(@images, dir_name)
 	puts "********************* 画像取得完了*************************"
 
 	puts "**************** 画像アップロードスタート *****************"
@@ -105,4 +125,5 @@ end
 
 FileUtils.rm_r(dir_name)
 puts "****************** ディレクトリ削除完了 *******************"
+flickr_obj.save_log(@images, dir_name)
 #####################################################################################################################

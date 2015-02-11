@@ -1,3 +1,4 @@
 *.swp
 *_secret.rb
 *.jpg
+log.log
