@@ -43,3 +43,5 @@ group :development, :test do
   gem 'spring'
 end
 
+# Devise
+gem 'devise', '3.4.1'
