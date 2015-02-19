@@ -258,5 +258,8 @@ Devise.setup do |config|
   # config.omniauth_path_prefix = '/my_engine/users/auth'
 
 	# omniauth-twitter
-	config.omniauth :twitter, "7AOoxBinaLh7RzxZYrSjzULZv", "KQ3mLe53EOMTS7PK5ty9yzuiNZZVZgxAMcwxxy8aEIX4IXxSv2"
+	config.omniauth :twitter, "YVIc4dE3nSaD59emNnD0h839A", "oaUqTo7sOOjHeSU8ByBM6pNxUzkQT8KvZ2ObTWhuoobnUVaytx"
+
+	# mail setting
+	config.mailer_sender = "@gmail.com"
 end
