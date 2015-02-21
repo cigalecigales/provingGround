@@ -258,8 +258,16 @@ Devise.setup do |config|
   # config.omniauth_path_prefix = '/my_engine/users/auth'
 
 	# omniauth-twitter
-	config.omniauth :twitter, "YVIc4dE3nSaD59emNnD0h839A", "oaUqTo7sOOjHeSU8ByBM6pNxUzkQT8KvZ2ObTWhuoobnUVaytx"
+	config.omniauth :twitter, "Rf8wtjwsuPepbBQe9mRBx3ZLk", "Ow0Uxnh1T7LVqx13LMOblVW9FsrPCToFvw3mfsvr8uk90J5JJC"
 
 	# mail setting
-	config.mailer_sender = "@gmail.com"
+	config.mailer_sender = "mail@gmail.com"
+
+	# lock sessings
+	config.unlock_strategy = :email
+	config.maximum_attempts = 3
+	config.unlock_keys = [:username]
+
+	# timeout setting
+	config.timeout_in = 3.minutes
 end
