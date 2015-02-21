@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
 	def self.from_omniauth(auth)
 		where(provider: auth["provider"], uid: auth["uid"]).first_or_create do |user|
 			user.provider = auth["provider"]
-			user.provider = auth["uid"]
+			user.uid = auth["uid"]
 			user.username = auth["info"]["nickname"]
 		end
 	end
@@ -22,5 +22,9 @@ class User < ActiveRecord::Base
 		else
 			super
 		end
+	end
+
+	def password_required?
+		super && provider.blank?
 	end
 end
