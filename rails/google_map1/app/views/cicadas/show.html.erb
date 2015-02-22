@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @cicada.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @cicada.description %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @cicada.address %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @cicada.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @cicada.longitude %>
+</p>
+
+<%= link_to 'Edit', edit_cicada_path(@cicada) %> |
+<%= link_to 'Back', cicadas_path %>
