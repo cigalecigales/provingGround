@@ -32,3 +32,9 @@ for i in 3..1
 end
 
 5.downto(1){ |i| print("#" * i + "\n") }
+
+5.downto(1){ |i| puts "#" * i }
+
+puts 5.downto(1).map{ |i| "#" * i }
+
+[*1..5].reverse.each{ |i| puts "#" * i }
