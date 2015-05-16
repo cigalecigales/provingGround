@@ -9,4 +9,10 @@ function addEvent(id){
 	$(document).on('change', function(){
 
 	});
+	$(document).on('blur', function(){
+
+	});
+	$(document).on('click', function(){
+
+	});
 }
