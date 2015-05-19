@@ -1,0 +1,17 @@
+#contents{
+  width: 100%;
+  box-shadow: none;
+}
+
+.flex{
+  display: block;
+}
+.flex li{
+  width: 100%;
+}
+
+#main{
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  height: 100%;
+}
