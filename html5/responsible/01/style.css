@@ -1,0 +1,51 @@
+/*************** base style ******************/
+html, body{
+  height: 100%;
+}
+
+body{
+  background: #192135;
+  color: #CFE3EB;
+  font-family: Helvetica, sans-serif;
+}
+@font-face{
+  font-family: mplus-1p-regular;
+  src: url('http://mplus-fonts.sourceforge.jp/webfonts/mplus-1p-regular.ttf')
+       format("truetype");
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+}
+a:hover{text-decoration: underline;}
+a:visited{}
+
+#contents{
+  margin: 0 auto;
+  width: 70%;
+  height: 100%;
+  max-width: 1200px;
+  background: #051015;
+}
+
+.flex{
+  width: 100%;
+  padding: 0;
+  display: flex;
+}
+.flex li{
+  list-style: none;
+  width: 20%;
+  background: #0C465F;
+  text-align: center;
+  padding: 10px 0;
+}
+
+#footer{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
