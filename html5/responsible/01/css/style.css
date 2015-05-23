@@ -156,3 +156,20 @@ a{
 .content_img{
   width: 5rem;
 }
+
+/********************************* gallery **************************************/
+.gallery_item{
+  list-style: none;
+}
+
+.gallery_image_base{
+  background: #000000;
+  margin-bottom: 10px;
+  border: 1px solid #2A294E;
+}
+
+.gallery_image{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+}
