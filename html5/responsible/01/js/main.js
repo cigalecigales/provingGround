@@ -5,20 +5,22 @@ $(function(){
         add_item_count = 3,
         added_items = 0,
         all_data = [],
-        add_data = [];
+        add_data = [],
+        scroll_position = 0;
 
     $.getJSON('./json/contents.json', init);
 
     function init(data){
       all_data = data;
-      add_items();
-      $load_button.on("click", add_items);
+      add_items(false);
+      $load_button.bind("click", true, add_items);
     }
 
-    function add_items(){
+    function add_items(flag){
       var elements = [],
-          slice_data = all_data.slice(added_items, added_items + add_item_count),
-          scroll_position;
+          slice_data = all_data.slice(added_items, added_items + add_item_count);
+
+      scroll_position = $load_button.offset().top;
 
       $.each(slice_data, function(i, item){
         var itemHTML =
@@ -35,17 +37,15 @@ $(function(){
 
       check_added_all();
 
-      $('html,body').animate({ scrollTop: 0 }, '1');
+      if(flag){
+        $("html, body").animate({scrollTop: scroll_position}, "1");
+      }
     }
 
     function check_added_all(){
       if(added_items == all_data.length){
         $load_button.css("display", "none");
       }
-    }
-
-    function set_scroll_position(){
-
     }
   });
 });
