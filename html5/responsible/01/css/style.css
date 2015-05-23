@@ -131,6 +131,7 @@ a{
 .button_style{
     display: table;
     margin: 0 auto;
+    text-align: center;
 }
 
 .button_style_big{
@@ -158,6 +159,10 @@ a{
 }
 
 /********************************* gallery **************************************/
+#gallery_items{
+  margin: 0;
+  padding: 0;
+}
 .gallery_item{
   list-style: none;
 }
