@@ -5,7 +5,6 @@ $(function(){
         add_item_count = 3,
         added_items = 0,
         all_data = [],
-        add_data = [],
         scroll_position = 0;
 
     $.getJSON('./json/contents.json', init);
