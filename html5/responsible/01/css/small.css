@@ -16,6 +16,21 @@
   height: 100%;
 }
 
+#main .title{
+  font-size: 5rem;
+  text-align: center;
+  color: #fff;
+}
+#main .title_style_big{
+  font-size: 4rem;
+}
+#main .title_style_small{
+  font-size: 3rem;
+}
+#main .title_sub{
+  font-size: 1rem;
+}
+
 #main .contents{
   display: block;
   width: 100%;
