@@ -6,22 +6,23 @@
  ***####
 
 */
+
+var ary = [];
+
 for(var i = 0; i <= 3; i++){
-	var c = new Array(i+1).join("＊");
-	var d = new Array(i+2).join("＃");
-	var e = new Array(7-i*2).join("＊");
-	document.write(c + d + e);
-	for(var j = 0; j <= 6; j++){
-	}
+	var a = new Array(i+1).join("　");
+	var b = new Array(i+2).join("＃");
+	var c = new Array(7-i*2).join("　");
+
+	var line = String(a + b + c) + String(a + b + c).split("").reverse().join("");
+	document.write(line);
+
+	ary.push(line);
+
 	document.write("<br/>");
 }
 
-
-function displayArray(ary){
-	for(var c in ary){
-		document.write(ary[c]);
-	}
-
-	document.write("<br/>");
+for(var c in ary.reverse()){
+	document.write(ary[c] + "<br/>");
 }
 
