@@ -22,17 +22,6 @@ body{
   color: #fff;
 }
 
-header{
-}
-
-#left{
-  width: 200px;
-  height: 450px;
-  float: left;
-  border-right: 1px solid #ba2636;
-  box-sizing: border-box;
-}
-
 .menu_button{
   width: 100%;
   box-sizing: border-box;
@@ -53,15 +42,48 @@ header{
   color: #fff;
 }
 
-#right{
-  width: 500px;
-  height: 450px;
-  float: right;
+#main{
+  width: 700px;
+  height: auto;
+  padding: 10px;
   box-sizing: border-box;
 }
 
 .top_username{
   color: #b7282e;
+}
+
+.change_ui_button{
+  padding: 5px;
+  margin: 8px;
+  margin-left: 545px;
+}
+
+.user_table{
+  width: 600px;
+  margin-left: 40px;
+}
+
+.history_table{
+  margin-left: 40px;
+  border-collapse: collapse;
+}
+.history_table thead{
+  background: #e95464;
+}
+.history_table thead td{
+  border: 1px solid #fff;
+  text-align: center;
+}
+
+.h_td1{
+  width: 40px;
+}
+.h_td2{
+  width: 150px;
+}
+.h_td3{
+  width: 400px;
 }
 
 .clearfix{
