@@ -53,13 +53,13 @@ body{
   color: #b7282e;
 }
 
-.change_ui_button{
+.regist_pi_button{
   padding: 5px;
   margin: 8px;
   margin-left: 545px;
 }
 
-.user_table{
+.product_table{
   width: 600px;
   margin-left: 40px;
 }
@@ -72,8 +72,11 @@ body{
   background: #e95464;
 }
 .history_table thead td{
-  border: 1px solid #fff;
+  border: 1px solid #a22041;
   text-align: center;
+}
+.history_table tbody td{
+  border: 1px solid #a22041;
 }
 
 .h_td1{
@@ -84,6 +87,10 @@ body{
 }
 .h_td3{
   width: 400px;
+}
+
+.amount{
+  text-align: right;
 }
 
 .clearfix{

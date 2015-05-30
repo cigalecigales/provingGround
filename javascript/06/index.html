@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>TCS --personal--</title>
+		<title>BUY! --personal--</title>
 		<link rel="stylesheet" href="style.css">
 
 	</head>
@@ -10,64 +10,60 @@
 
 		<div id="base" style="display: none;">
 			<div id="header">
-				<header><b>ABC</b> --personal--</header>
+				<header><b>BUY!</b> --personal--</header>
 			</div>
 
 			<div id="main">
 				ようこそ<span class="top_username"></span>さん
 
-				<div id="user_info">
-					<h2>ユーザー情報</h2>
-					<table id="user_table" class="user_table">
+				<div id="product_info">
+					<h2>商品情報</h2>
+					<table id="product_table" class="product_table">
 						<tr>
-							<td>名前</td>
-							<td><input type="text" value="" maxlength="10"></td>
+							<td>商品名</td>
+							<td><input id="product_name" type="text" value="" maxlength="20"></td>
 						</tr>
 						<tr>
-							<td>年齢</td>
-							<td><input type="text" value="" maxlength="3"></td>
+							<td>購入日</td>
+							<td><input id="purchase_date" type="text" value="" maxlength="8"></td>
 						</tr>
 						<tr>
-							<td>誕生日</td>
-							<td><input type="text" value="" maxlength="8"></td>
-						</tr>
-						<tr>
-							<td>性別</td>
+							<td>仕入先</td>
 							<td>
-								<label><input type="radio" value="0" name="gender">男性</label>
-								<label><input type="radio" value="1" name="gender">女性</label>
+								<label><input type="radio" value="0" name="supplier" checked="">国内</label>
+								<label><input type="radio" value="1" name="supplier">国外</label>
 							</td>
 						</tr>
 						<tr>
-							<td>貯金額</td>
-							<td><input type="text" value="" maxlength="12">円</td>
+							<td>購入額</td>
+							<td><input id="purchase_amount" type="text" value="" maxlength="12" class="amount">円</td>
 						</tr>
 						<tr>
-							<td>趣味</td>
+							<td>商品タイプ</td>
 							<td>
-								<fieldset id="out">
-									<legend><input type="radio" name="in_out" value="0" checked=""> アウトドア</legend>
-									<label><input type="checkbox" value="0" class="h_chk">登山</label>
-									<label><input type="checkbox" value="0" class="h_chk">バーベキュー</label>
-									<label><input type="checkbox" value="0" class="h_chk">海水浴</label>
-									<label><input type="checkbox" value="0" class="h_chk">散歩</label>
+								<fieldset id="books">
+									<legend><input id="books_chk" type="checkbox" name="books" value="0">書籍</legend>
+									<label><input type="checkbox" name="books_type" value="0" class="h_chk">漫画</label>
+									<label><input type="checkbox" name="books_type" value="0" class="h_chk">雑誌</label>
+									<label><input type="checkbox" name="books_type" value="0" class="h_chk">学術書</label>
+									<label><input type="checkbox" name="books_type" value="0" class="h_chk">楽譜</label>
 								</fieldset>
-								<fieldset id="in">
-									<legend><input type="radio" name="in_out" value="1">インドア</legend>
-									<label><input type="checkbox" value="0" class="h_chk">映画</label>
-									<label><input type="checkbox" value="0" class="h_chk">音楽</label>
-									<label><input type="checkbox" value="0" class="h_chk">睡眠</label>
-									<label><input type="checkbox" value="0" class="h_chk">茶道</label>
+								<fieldset id="furnitures">
+									<legend><input id="furnitures_chk" type="checkbox" name="furnitures" value="1">家具</legend>
+									<label><input type="checkbox" name="furnitures_type" value="0" class="h_chk">机</label>
+									<label><input type="checkbox" name="furnitures_type" value="0" class="h_chk">椅子</label>
+									<label><input type="checkbox" name="furnitures_type" value="0" class="h_chk">冷蔵庫</label>
+									<label><input type="checkbox" name="furnitures_type" value="0" class="h_chk">電子レンジ</label>
 								</fieldset>
 							</td>
 						</tr>
 					</table>
-					<button class="change_ui_button" type="submit" name="submit">情報を変更する</button>
+					<button id="regist_button" class="regist_pi_button" type="submit" name="submit">商品を登録する</button>
 				</div>
 
 				<div id="change_list">
 					<h2>変更履歴</h2>
-					<table class="history_table">
+					<table id="history_table" class="history_table">
 						<thead>
 							<tr>
 								<td class="h_td1">No</td>
@@ -75,6 +71,8 @@
 								<td class="h_td3">変更内容</td>
 							</tr>
 						</thead>
+						<tbody>
+						</tbody>
 					</table>
 				</div>
 			</div>
