@@ -1,0 +1,6 @@
+.flex{
+  display: block;
+}
+.flex li{
+  width: 100%;
+}
