@@ -1,8 +1,7 @@
 /*************** base style ******************/
 html, body{
-  height: 100%;
+  height: auto;
 }
-
 body{
   background: #000;
   color: #CFE3EB;
@@ -12,6 +11,7 @@ body{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  background-attachment: fixed;
 }
 
 header{
@@ -67,7 +67,6 @@ a{
 #main{
   margin-top: 5rem;
   margin-bottom: 1rem;
-  height: 500px;
 }
 #main .title{
   font-size: 8rem;
@@ -114,6 +113,7 @@ a{
 }
 #main:after{
   clear: both;
+  content: "";
 }
 
 /*************** footer style ******************/
@@ -138,10 +138,10 @@ a{
   display: table-cell;
   width: 12rem;
   height: 2.5rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   border: 1px solid #fff;
   vertical-align: middle;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 .button_style_big:hover{
@@ -177,4 +177,14 @@ a{
   width: 100%;
   box-sizing: border-box;
   padding: 10px;
+}
+
+/*************** scroll *******************/
+#scroll_button{
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+}
+.scroll_img{
+  width: 30px;
 }

@@ -4,6 +4,7 @@ html, body{
   height: 100%;
 }
 body{
+  background: #000;
   background-image: url("../images/main.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -49,6 +50,27 @@ body{
 .details_link:hover{
   background: #fff;
   color: #1e50a2;
+}
+
+/* Gallery */
+.gallery_items{
+  margin: 0;
+  padding: 0;
+}
+.gallery_item{
+  list-style: none;
+}
+
+.gallery_image_base{
+  background: skyblue;
+  margin-bottom: 10px;
+  border: 1px solid #2A294E;
+}
+
+.gallery_image{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
 }
 
 
