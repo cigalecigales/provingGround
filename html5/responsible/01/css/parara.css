@@ -2,21 +2,23 @@
   height: 3000px;
 }
 
-#sq1{
-  width: 100%;
+#circle1{
+  width: 50px;
   height: 50px;
   background: red;
   position: fixed;
-  top: 100px;
+  top: 100%;
+  border-radius: 25px;
 }
-#sq2{
-  width: 50px;
-  height: 50px;
+#circle2{
+  width: 100px;
+  height: 100px;
   background: pink;
   position: fixed;
   top: 10px;
+  border-radius: 50px;
 }
-#sq3{
+#circle3{
   width: 50px;
   height: 50px;
   background: blue;
