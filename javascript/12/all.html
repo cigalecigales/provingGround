@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>商品登録システム</title>
+		<link rel="stylesheet" href="style.css">
+
+	</head>
+	<body>
+
+		<div id="base">
+			<div id="header">
+				<header><b>商品登録システム</b></header>
+			</div>
+
+			<div id="main">
+
+				<div id="product_info">
+					<h2>商品情報</h2>
+					<table id="product_table" class="product_table">
+						<tr>
+							<td class="td_label">商品名</td>
+							<td class="td_input">
+								<input id="product_name"
+										  type="text"
+										  value=""
+										  onblur="check_product_name()"
+										  maxlength="20">
+							</td>
+							<td class="td_input">
+								<span id="product_name_err"
+										 class="errorTextStyle"
+										 style="visibility: hidden;">
+										 ※商品名の入力は必須です。
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="td_label">購入日</td>
+							<td class="td_input">
+								<input id="purchase_date" 
+									   type="text" 
+									   value="" 
+									   onfocus="pd_focusEvent()"
+									   onblur="pd_blurEvent()"
+									   maxlength="8">
+							</td>
+							<td class="td_input">
+								<span id="purchase_date_err" 
+									  class="errorTextStyle"
+									  style="visibility: hidden;">
+									※入力された値が日付ではありません。
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="td_label">仕入先</td>
+							<td class="td_input">
+								<label><input type="radio" value="国内" name="supplier" checked>国内</label>
+								<label><input type="radio" value="国外" name="supplier">国外</label>
+							</td>
+							<td class="td_input"></td>
+						</tr>
+						<tr>
+							<td class="td_label">購入額</td>
+							<td class="td_input">
+								<input id="purchase_amount" 
+									   type="text" 
+									   value="" 
+									   maxlength="12" 
+									   class="amount"
+									   onfocus="pa_focusEvent()"
+									   onblur="pa_blurEvent()">円
+							</td>
+							<td class="td_input">
+								<span id="purchase_amount_err" 
+									  class="errorTextStyle"
+									  style="visibility: hidden;">
+									※入力された値が数値ではありません。
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="td_label">商品タイプ</td>
+							<td class="td_input" colspan="2">
+								<fieldset id="books">
+									<legend><input id="books_chk" type="checkbox" name="books" value="0" onclick="booksCheck()">書籍</legend>
+									<label><input type="checkbox" name="books_type" class="h_chk" value="漫画">漫画</label>
+									<label><input type="checkbox" name="books_type" class="h_chk" value="雑誌">雑誌</label>
+									<label><input type="checkbox" name="books_type" class="h_chk" value="学術書">学術書</label>
+									<label><input type="checkbox" name="books_type" class="h_chk" value="楽譜">楽譜</label><br/>
+									<span id="books_err" class="errorTextStyle" style="display: none;">※1つ以上選択してください。</span>
+								</fieldset>
+								<fieldset id="furnitures">
+									<legend><input id="furnitures_chk" type="checkbox" name="furnitures" value="1" onclick="furnituresCheck()">家具</legend>
+									<label><input type="checkbox" name="furnitures_type" class="h_chk" value="机">机</label>
+									<label><input type="checkbox" name="furnitures_type" class="h_chk" value="椅子">椅子</label>
+									<label><input type="checkbox" name="furnitures_type" class="h_chk" value="冷蔵庫">冷蔵庫</label>
+									<label><input type="checkbox" name="furnitures_type" class="h_chk" value="電子レンジ">電子レンジ</label><br/>
+									<span id="furnitures_err" class="errorTextStyle" style="display: none;">※1つ以上選択してください。</span>
+								</fieldset>
+							</td>
+							<td></td>
+						</tr>
+					</table>
+					<button id="regist_button" class="regist_pi_button" type="submit" name="submit" onclick="regist()">商品を登録する</button>
+				</div>
+
+				<div id="change_list">
+					<h2>登録履歴</h2>
+					<textarea id="history_area" rows="5" class="textarea"></textarea>
+				</div>
+			</div>
+
+			<div class="clearfix"></div>
+
+		</div>
+
+
+		<script src="product_name.js"></script>
+		<script src="purchase_date.js"></script>
+		<script src="purchase_amount.js"></script>
+		<script src="product_type.js"></script>
+		<script src="regist_button.js"></script>
+	</body>
+</html>
