@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>商品登録システム</title>
+		<link rel="stylesheet" href="style.css">
+
+	</head>
+	<body>
+		<div id="base">
+			<div id="header">
+				<header><b>商品登録システム</b></header>
+			</div>
+
+			<div id="main">
+
+				<div id="product_info">
+					<h2>商品情報</h2>
+
+					<table id="product_table" class="product_table">
+						<tr>
+							<td class="td_label">商品名</td>
+							<td class="td_input">
+								<input id="product_name"
+										  type="text"
+										  value=""
+										  onblur="check_product_name()"
+										  maxlength="20">
+							</td>
+							<td class="td_input">
+								<span id="product_name_err"
+										 class="errorTextStyle"
+										 style="visibility: hidden;">
+										 ※商品名の入力は必須です。
+								</span>
+							</td>
+						</tr>
+					</table>
+
+				</div>
+
+			</div>
+		</div>
+
+
+		<script src="product_name.js"></script>
+	</body>
+</html>
