@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Base HTML</title>
+		<meta charset="utf-8"/>
+		<script src="_global.js"></script>
+	</head>
+	<body>
+		<script>
+			var v1 = "aaa";
+			var v2 = v1;
+			p(v2);
+			v1 = "bbb";
+			p(v2);
+
+			var o1 = {  };
+			o1.x = 2;
+			var o2 = { x: 3 };
+
+			var o3 = o2;
+			p(o3.x);
+			o3 = o1;
+			p(o3.x);
+
+			var o4 = {  };
+			function plus(obj){
+				obj.x = "sample";
+			}
+
+			plus(o4);
+			p(o4.x);
+		</script>
+	</body>
+</html>
+

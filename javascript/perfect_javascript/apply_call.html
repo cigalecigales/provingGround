@@ -7,6 +7,15 @@
 	</head>
 	<body>
 		<script>
+			var o1 = { x : 1, y : 2 }
+			var o2 = { x : 3, y : 4 }
+			function ac(){
+				p(this.x);
+				p(this.y);
+			}
+
+			ac.apply(o1);
+			ac.call(o2);
 		</script>
 	</body>
 </html>

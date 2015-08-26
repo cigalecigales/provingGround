@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Base HTML</title>
+		<meta charset="utf-8"/>
+		<script src="_global.js"></script>
+	</head>
+	<body>
+		<script>
+			var flag = true;
+			var count = 1;
+			while(flag){
+				p("外側ループ");
+				while(count < 30){
+					p(count);
+					count++;
+					if(count == 29){
+						flag = false;
+						break;
+					}
+				}
+			}
+		</script>
+	</body>
+</html>
+

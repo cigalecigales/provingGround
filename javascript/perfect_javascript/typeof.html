@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Base HTML</title>
+		<meta charset="utf-8"/>
+		<script src="_global.js"></script>
+	</head>
+	<body>
+		<script>
+			var n1 = 23;
+			var n2 = new Number(23);
+			p(typeof n1);
+			p(typeof n2);
+
+			if(n1 == n2){
+				p("一緒だよ");
+			}else{
+				p("違うよ");
+			}
+
+			var s1 = "test";
+			var s2 = new String("test");
+
+			if(s1 == s2){
+				p("一緒だよ");
+			}else{
+				p("違うよ");
+			}
+
+		</script>
+	</body>
+</html>
+
